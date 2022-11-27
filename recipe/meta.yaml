@@ -11,7 +11,7 @@ source:
   sha256: d06657a28c4646109fd03fcb7aba0c55a40d855aeba86a77424ac531946e6982
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -23,7 +23,6 @@ requirements:
   run:
     - numpy >=1.14.1
     - pandas >=0.23.0
-    - pyspark >=2.4.7, <3.1.1
     - python >=3.6
 
 test:
