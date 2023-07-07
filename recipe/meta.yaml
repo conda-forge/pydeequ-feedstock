@@ -1,5 +1,6 @@
 {% set name = "pydeequ" %}
 {% set version = "1.1.0" %}
+{% set spark_upper_bound = "3.3" %}
 
 
 package:
@@ -24,15 +25,15 @@ requirements:
     - numpy >=1.14.1
     - pandas >=0.23.0
     - python >=3.6
-    - pyspark
 
 test:
-  imports:
-    - pydeequ
   commands:
+    - export SPARK_VERSION='{{ spark_upper_bound }}'
+    - python -c "import pydeequ"
     - pip check
   requires:
     - pip
+    - pyspark >=2.4.7,<{{ spark_upper_bound }}
 
 about:
   home: https://github.com/awslabs/python-deequ
