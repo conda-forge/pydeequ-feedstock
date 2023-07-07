@@ -1,5 +1,6 @@
 {% set name = "pydeequ" %}
-{% set version = "1.0.1" %}
+{% set version = "1.1.0" %}
+{% set spark_upper_bound = "3.3" %}
 
 
 package:
@@ -8,10 +9,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pydeequ-{{ version }}.tar.gz
-  sha256: d06657a28c4646109fd03fcb7aba0c55a40d855aeba86a77424ac531946e6982
+  sha256: 2655554b7fab2faa040cdaa7dc1e887834d02fe66f1ab2b941a824d321ada54b
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -24,15 +25,15 @@ requirements:
     - numpy >=1.14.1
     - pandas >=0.23.0
     - python >=3.6
-    - pyspark
 
 test:
-  imports:
-    - pydeequ
   commands:
+    - export SPARK_VERSION='{{ spark_upper_bound }}'
+    - python -c "import pydeequ"
     - pip check
   requires:
     - pip
+    - pyspark >=2.4.7,<{{ spark_upper_bound }}
 
 about:
   home: https://github.com/awslabs/python-deequ
