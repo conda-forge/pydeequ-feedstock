@@ -1,5 +1,5 @@
 {% set name = "pydeequ" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 {% set spark_upper_bound = "3.3" %}
 
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pydeequ-{{ version }}.tar.gz
-  sha256: 2655554b7fab2faa040cdaa7dc1e887834d02fe66f1ab2b941a824d321ada54b
+  sha256: 0f6caa89f5d1542001457b58b3b1520ad8eb69af17967d05ce113ef203e71755
 
 build:
   number: 0
@@ -19,12 +19,12 @@ build:
 requirements:
   host:
     - pip
-    - poetry
-    - python >=3.6
+    - poetry-core >=1.0.0
+    - python >=3.7,<4
   run:
     - numpy >=1.14.1
     - pandas >=0.23.0
-    - python >=3.6
+    - python >=3.7,<4
 
 test:
   commands:
