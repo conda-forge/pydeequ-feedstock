@@ -1,5 +1,5 @@
 {% set name = "pydeequ" %}
-{% set version = "1.1.1" %}
+{% set version = "1.2.0" %}
 {% set spark_upper_bound = "3.3" %}
 
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pydeequ-{{ version }}.tar.gz
-  sha256: 0f6caa89f5d1542001457b58b3b1520ad8eb69af17967d05ce113ef203e71755
+  sha256: 20c70c03efccfcf8ae131cc7bd60eb653834a7ceec1f4cbc9e9f06e165d71484
 
 build:
   number: 0
