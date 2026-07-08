@@ -9,13 +9,12 @@ Package license: Apache-2.0
 
 Summary: PyDeequ - Unit Tests for Data
 
-Documentation: https://pydeequ.readthedocs.io
+Documentation: https://pydeequ.readthedocs.io/
 
 PyDeequ is a Python API for Deequ, a library built on top of Apache
- Spark for defining "unit tests for data", which measure data
- quality in large datasets. PyDeequ is written to support usage of
- Deequ in Python.
-
+Spark for defining "unit tests for data", which measure data
+quality in large datasets. PyDeequ is written to support usage of
+Deequ in Python.
 
 Current build status
 ====================
