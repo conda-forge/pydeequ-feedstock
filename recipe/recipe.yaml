@@ -3,7 +3,7 @@ schema_version: 1
 context:
   name: pydeequ
   version: "1.6.0"
-  spark_upper_bound: "4.0.0"
+  spark_upper_bound: "3.5"
 
 package:
   name: ${{ name|lower }}
@@ -32,7 +32,7 @@ tests:
   - requirements:
       run:
         - pip
-        - pyspark >=2.4.7,<${{ spark_upper_bound }}
+        - pyspark >=2.4.7,<=${{ spark_upper_bound }}
         - python ${{ python_min }}.*
     script:
       - export SPARK_VERSION='${{ spark_upper_bound }}'
