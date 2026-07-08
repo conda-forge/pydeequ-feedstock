@@ -33,7 +33,7 @@ tests:
       run:
         - pip
         - pyspark >=2.4.7,<${{ spark_upper_bound }}
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
     script:
       - export SPARK_VERSION='${{ spark_upper_bound }}'
       - python -c "import pydeequ"
