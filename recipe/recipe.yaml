@@ -24,9 +24,9 @@ requirements:
     - poetry-core >=1.0.0
     - python ${{ python_min }}.*
   run:
-    - numpy >=1.14.1
-    - pandas >=0.23.0
     - python >=${{ python_min }}
+    - numpy >=1.22
+    - pandas >=2.2
 
 tests:
   - requirements:
