@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pydeequ
-  version: "1.6.0"
+  version: "1.7.0"
   spark_upper_bound: "3.5"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pydeequ-${{ version }}.tar.gz
-  sha256: 059773f2e3b7329f0a23e58548b24fbb7ca2f6b5c73b1032abb0f21129f72148
+  sha256: ce9f8f9dc2dc8fc3c585ef3facc6cddcf3bd883849ac1bb065d75d10c6dba479
 
 build:
   number: 0
@@ -24,9 +24,9 @@ requirements:
     - poetry-core >=1.0.0
     - python ${{ python_min }}.*
   run:
-    - numpy >=1.14.1
-    - pandas >=0.23.0
     - python >=${{ python_min }}
+    - numpy >=1.22
+    - pandas >=2.2
 
 tests:
   - requirements:
